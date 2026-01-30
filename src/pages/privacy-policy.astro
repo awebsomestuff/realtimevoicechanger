@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Privacy Policy";
+const description = "Privacy Policy for RealTime Voice Changer. Learn how we handle your data and protect your privacy.";
+const rawHtmlContent = `<h2>Privacy Policy</h2>
+<p><strong>Last updated:</strong> January 30, 2026</p>
+
+<p>RealTime Voice Changer ("we", "us", or "our") operates the website <a href="https://realtimevoicechanger.com">realtimevoicechanger.com</a> (the "Site"). This Privacy Policy explains how we collect, use, and protect information when you visit our Site.</p>
+
+<h2>Information We Collect</h2>
+
+<h3>Automatically Collected Information</h3>
+<p>When you visit our Site, our servers and third-party services may automatically collect certain information, including:</p>
+<ul>
+<li>IP address</li>
+<li>Browser type and version</li>
+<li>Operating system</li>
+<li>Referring URL</li>
+<li>Pages visited and time spent on each page</li>
+<li>Date and time of your visit</li>
+</ul>
+
+<h3>Cookies and Tracking Technologies</h3>
+<p>We and our advertising partners may use cookies, web beacons, and similar tracking technologies to:</p>
+<ul>
+<li>Analyze website traffic and usage patterns</li>
+<li>Serve personalized advertisements</li>
+<li>Remember your preferences</li>
+</ul>
+<p>You can control cookies through your browser settings. Disabling cookies may affect your experience on the Site.</p>
+
+<h2>Third-Party Advertising</h2>
+<p>We use Google AdSense to display advertisements on our Site. Google and its advertising partners may use cookies to serve ads based on your prior visits to our Site or other websites. You can opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" rel="nofollow" target="_blank">Google Ads Settings</a> or <a href="https://optout.aboutads.info/" rel="nofollow" target="_blank">www.aboutads.info</a>.</p>
+
+<h2>Third-Party Links</h2>
+<p>Our Site contains links to third-party websites, including download links for voice changer software and voice models hosted on external platforms. We are not responsible for the privacy practices or content of those third-party sites. We encourage you to read their privacy policies before providing any personal information.</p>
+
+<h2>How We Use Information</h2>
+<p>We use the collected information to:</p>
+<ul>
+<li>Operate and maintain the Site</li>
+<li>Analyze usage to improve our content and user experience</li>
+<li>Display relevant advertisements</li>
+<li>Detect and prevent technical issues</li>
+</ul>
+
+<h2>Data Sharing</h2>
+<p>We do not sell your personal information. We may share anonymized, aggregated data with advertising partners (such as Google AdSense) for the purpose of serving ads and analyzing traffic.</p>
+
+<h2>Children's Privacy</h2>
+<p>Our Site is not directed to children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it promptly.</p>
+
+<h2>Data Security</h2>
+<p>We take reasonable measures to protect information collected through the Site. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+<h2>Your Rights</h2>
+<p>Depending on your jurisdiction, you may have the right to:</p>
+<ul>
+<li>Access the personal data we hold about you</li>
+<li>Request correction or deletion of your data</li>
+<li>Opt out of personalized advertising</li>
+<li>Lodge a complaint with a data protection authority</li>
+</ul>
+
+<h2>Changes to This Policy</h2>
+<p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date.</p>
+
+<h2>Contact Us</h2>
+<p>If you have questions about this Privacy Policy, please contact us at: <a href="mailto:contact@realtimevoicechanger.com">contact@realtimevoicechanger.com</a></p>`;
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Privacy Policy</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

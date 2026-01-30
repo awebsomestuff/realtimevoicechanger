@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Terms of Service";
+const description = "Terms of Service for RealTime Voice Changer. Read the terms and conditions for using our website.";
+const rawHtmlContent = `<h2>Terms of Service</h2>
+<p><strong>Last updated:</strong> January 30, 2026</p>
+
+<p>Welcome to RealTime Voice Changer. By accessing or using <a href="https://realtimevoicechanger.com">realtimevoicechanger.com</a> (the "Site"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, please do not use the Site.</p>
+
+<h2>About the Site</h2>
+<p>RealTime Voice Changer is a fan-made informational website about RVC (Retrieval-based Voice Conversion) technology and AI voice models. We are <strong>not</strong> affiliated with, endorsed by, or connected to the developers of any voice changer software or the creators of any voice models featured on this Site.</p>
+
+<h2>Use of the Site</h2>
+<p>You agree to use the Site only for lawful purposes and in accordance with these Terms. You agree not to:</p>
+<ul>
+<li>Use the Site in any way that violates applicable laws or regulations</li>
+<li>Attempt to interfere with or disrupt the Site's operation</li>
+<li>Use automated systems (bots, scrapers) to access the Site without our permission</li>
+<li>Reproduce, distribute, or create derivative works from our content without attribution</li>
+</ul>
+
+<h2>Content and Information</h2>
+<p>The content on this Site is provided for informational and educational purposes only. We make reasonable efforts to ensure accuracy, but we do not guarantee that all information is complete, current, or error-free.</p>
+<p>Voice models, software downloads, and other resources linked from this Site are hosted by third parties. We do not control, endorse, or assume responsibility for third-party content, products, or services.</p>
+
+<h2>Intellectual Property</h2>
+<p>The original content, design, and compilation of information on this Site are the property of RealTime Voice Changer and are protected by copyright laws. Character names, images, and trademarks referenced on this Site belong to their respective owners and are used here for informational purposes under fair use.</p>
+
+<h2>Third-Party Links and Downloads</h2>
+<p>Our Site contains links to external websites and download resources. These links are provided for convenience only. We are not responsible for:</p>
+<ul>
+<li>The content, accuracy, or availability of third-party sites</li>
+<li>Any damage or loss caused by downloading files from external sources</li>
+<li>The privacy practices of linked websites</li>
+</ul>
+<p>You access third-party resources at your own risk.</p>
+
+<h2>Disclaimer of Warranties</h2>
+<p>The Site is provided "as is" and "as available" without warranties of any kind, either express or implied. We disclaim all warranties, including but not limited to:</p>
+<ul>
+<li>Merchantability and fitness for a particular purpose</li>
+<li>Accuracy or completeness of content</li>
+<li>Uninterrupted or error-free operation</li>
+</ul>
+
+<h2>Limitation of Liability</h2>
+<p>To the fullest extent permitted by law, RealTime Voice Changer shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Site, including but not limited to damage to your computer system or loss of data resulting from downloading materials from the Site or linked resources.</p>
+
+<h2>Responsible Use of Voice Models</h2>
+<p>Voice models and voice changer software featured on this Site can be used for legitimate purposes such as entertainment, content creation, and accessibility. You are solely responsible for how you use these tools. You agree not to use voice models or voice changer technology to:</p>
+<ul>
+<li>Impersonate others with intent to defraud or deceive</li>
+<li>Create non-consensual deepfake content</li>
+<li>Harass, threaten, or harm others</li>
+<li>Violate any applicable laws</li>
+</ul>
+
+<h2>Changes to These Terms</h2>
+<p>We reserve the right to modify these Terms at any time. Changes will be posted on this page with an updated "Last updated" date. Your continued use of the Site after changes constitutes acceptance of the new Terms.</p>
+
+<h2>Governing Law</h2>
+<p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.</p>
+
+<h2>Contact Us</h2>
+<p>If you have questions about these Terms of Service, please contact us at: <a href="mailto:contact@realtimevoicechanger.com">contact@realtimevoicechanger.com</a></p>`;
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Terms of Service</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>
