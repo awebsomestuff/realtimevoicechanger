@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Cinderela Voice Model - Disney";
+const description = "Download Cinderela Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best Disney Voice Models.";
+const rawHtmlContent = "Here we demonstrate you every <strong>Cinderela Voice Models</strong> so you can access and use them in whatever kind of program. Don't hesitate and start using the most outstanding Disney voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Cinderela</span>\n  <span class=\"vm-cell category\">Disney</span>\n  <span class=\"vm-cell rvc empty\">-</span>\n  <span class=\"vm-cell epochs empty\">-</span>\n  <span class=\"vm-cell language\">Portuguese (BR)</span>\n  <a class=\"download-btn\" href=\"https://models.weights.gg/2815bded-4a4d-4409-9783-3e9269809460.zip\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Cinderella (1950)</span>\n  <span class=\"vm-cell category\">Disney</span>\n  <span class=\"vm-cell rvc\">RVC2</span>\n  <span class=\"vm-cell epochs\">350</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://drive.google.com/file/d/17jW5t8ZKk96M3s1_DEvejC2mngD8jeZi/view?usp=drive_link\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/Cinderela-Voice-Models.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p><strong>Cinderella</strong>, the central character in Disney's 1950 animated film, finds herself thrust into servitude after her father's remarriage and subsequent passing. Enduring mistreatment at the hands of her wicked stepmother and stepsisters, she maintains her kindness, spirit, and inner beauty. Despite her oppressive circumstances, Cinderella's unwavering faith and optimism attract the aid of a Fairy Godmother, whose magic facilitates her transformation from maid to princess. As the second official Disney Princess, following Snow White, Cinderella embodies resilience and grace amidst adversity.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Cinderela Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

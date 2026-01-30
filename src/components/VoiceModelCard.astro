@@ -1,0 +1,14 @@
+---
+interface Props {
+  name: string;
+  slug: string;
+  image: string;
+}
+
+const { name, slug, image } = Astro.props;
+---
+
+<a href={`/voice-models/${slug}/`} class="voice-model-nuevo">
+  <img src={image} alt={`${name} Voice Model`} loading="lazy" />
+  <p>{name}</p>
+</a>

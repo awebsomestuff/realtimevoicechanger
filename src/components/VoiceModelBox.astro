@@ -1,0 +1,46 @@
+---
+interface Props {
+  title: string;
+  category?: string;
+  rvcVersion?: string;
+  epochs?: string;
+  language?: string;
+  downloadUrl?: string;
+}
+
+const { title, category, rvcVersion, epochs, language, downloadUrl } = Astro.props;
+---
+
+<div class="voice-model">
+  <h2>{title}</h2>
+
+  {category && (
+    <div class="category">
+      <span>Category:</span> {category}
+    </div>
+  )}
+
+  {rvcVersion && (
+    <div class="rvc">
+      <span>RVC Version:</span> {rvcVersion}
+    </div>
+  )}
+
+  {epochs && (
+    <div class="epochs">
+      <span>Epochs:</span> {epochs}
+    </div>
+  )}
+
+  {language && (
+    <div class="language">
+      <span>Language:</span> {language}
+    </div>
+  )}
+
+  {downloadUrl && (
+    <a href={downloadUrl} class="download-btn" target="_blank" rel="noopener noreferrer">
+      Download from HuggingFace
+    </a>
+  )}
+</div>

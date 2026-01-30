@@ -1,0 +1,260 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  canonicalUrl?: string;
+}
+
+const {
+  title,
+  description = "Download Real time AI Voice Changer, a 100% FREE Software for PC, with tons of Free AI Voices.",
+  canonicalUrl
+} = Astro.props;
+
+const siteTitle = title.includes("Real-Time Voice Changer") ? title : `${title} | Real-Time Voice Changer`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/webp" href="/uploads/2024/05/cropped-realtime-voice-changer-icon-32x32.webp" />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <title>{siteTitle}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={description} />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="site-logo">
+          <a href="/">
+            <img src="/uploads/2023/12/realtimevoicechanger.png" alt="Real Time Voice Changer" />
+          </a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/voice-models/">Voice Models</a></li>
+            <li><a href="/okada/">Okada</a></li>
+            <li><a href="/clownfish/">Clownfish</a></li>
+            <li><a href="/robovox/">RoboVox</a></li>
+            <li><a href="/voicemod/">Voicemod</a></li>
+            <li><a href="/magicmic/">MagicMic</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {new Date().getFullYear()} RealTime Voice Changer is a fan-made website about RVC and Voice Models.</p>
+      <p>We are not related with the developers of the software or the creators of the Voice Models.</p>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // ========== SISTEMA DE FILTROS ==========
+        const filtersMain = document.getElementById('filters-main');
+        const iconos = document.querySelectorAll('.contenedor-iconos .icono');
+        const contenedorIconos = document.querySelector('.contenedor-iconos');
+
+        if (filtersMain && iconos.length > 0) {
+          let activeMainCategory = 'all';
+          let activeSubCategory = null;
+
+          // Manejar click en categorías principales
+          filtersMain.addEventListener('click', function(e) {
+            if (e.target.classList.contains('filter-btn')) {
+              const category = e.target.dataset.category;
+              const hasSubcats = e.target.dataset.hasSubcats === 'true';
+
+              // Actualizar botones activos
+              filtersMain.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+              e.target.classList.add('active');
+
+              // Ocultar todas las subcategorías
+              document.querySelectorAll('.filters-sub').forEach(sub => {
+                sub.style.display = 'none';
+              });
+
+              // Mostrar subcategorías si las tiene
+              if (hasSubcats && category !== 'all') {
+                const subContainer = document.getElementById('filters-sub-' + category);
+                if (subContainer) {
+                  subContainer.style.display = 'flex';
+                  // Reset subcategoría activa
+                  subContainer.querySelectorAll('.filter-sub-btn').forEach(btn => btn.classList.remove('active'));
+                  subContainer.querySelector('.filter-sub-btn').classList.add('active');
+                }
+              }
+
+              activeMainCategory = category;
+              activeSubCategory = null;
+              applyFilters();
+            }
+          });
+
+          // Manejar click en subcategorías
+          document.querySelectorAll('.filters-sub').forEach(subContainer => {
+            subContainer.addEventListener('click', function(e) {
+              if (e.target.classList.contains('filter-sub-btn')) {
+                const subcategory = e.target.dataset.subcategory;
+
+                // Actualizar botones activos en subcategoría
+                subContainer.querySelectorAll('.filter-sub-btn').forEach(btn => btn.classList.remove('active'));
+                e.target.classList.add('active');
+
+                // Si es "All [categoria]", usar solo la categoría principal
+                if (subcategory.startsWith('all-')) {
+                  activeSubCategory = null;
+                } else {
+                  activeSubCategory = subcategory;
+                }
+                applyFilters();
+              }
+            });
+          });
+
+          function applyFilters() {
+            let visibleCount = 0;
+
+            iconos.forEach(function(icono) {
+              const categories = (icono.dataset.categories || '').split(' ');
+              let shouldShow = false;
+
+              if (activeMainCategory === 'all') {
+                shouldShow = true;
+              } else if (activeSubCategory) {
+                // Filtrar por subcategoría específica
+                shouldShow = categories.includes(activeSubCategory);
+              } else {
+                // Filtrar por categoría principal
+                shouldShow = categories.includes(activeMainCategory);
+              }
+
+              if (shouldShow) {
+                icono.classList.remove('filtered-out');
+                visibleCount++;
+              } else {
+                icono.classList.add('filtered-out');
+              }
+            });
+
+            // Mostrar mensaje si no hay resultados
+            let noResults = contenedorIconos.querySelector('.no-filter-results');
+            if (visibleCount === 0) {
+              if (!noResults) {
+                noResults = document.createElement('div');
+                noResults.className = 'no-filter-results';
+                noResults.textContent = 'No voice models found in this category';
+                contenedorIconos.appendChild(noResults);
+              }
+            } else if (noResults) {
+              noResults.remove();
+            }
+          }
+        }
+
+        // ========== BUSCADOR CON DROPDOWN ==========
+        const searchInput = document.getElementById('voice-search');
+        const dropdown = document.getElementById('search-dropdown');
+
+        if (searchInput && dropdown) {
+          // Construir array de voice models
+          const voiceModels = [];
+          iconos.forEach(function(icono) {
+            const link = icono.querySelector('a');
+            const img = icono.querySelector('.imagen-icono');
+            const texto = icono.querySelector('.texto-icono');
+
+            if (link && texto) {
+              voiceModels.push({
+                name: texto.textContent.trim(),
+                url: link.href,
+                img: img ? img.src : '',
+                categories: icono.dataset.categories || ''
+              });
+            }
+          });
+
+          searchInput.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase().trim();
+
+            if (searchTerm === '') {
+              dropdown.classList.remove('active');
+              dropdown.innerHTML = '';
+              return;
+            }
+
+            // Filtrar resultados
+            const results = voiceModels.filter(vm =>
+              vm.name.toLowerCase().includes(searchTerm)
+            ).slice(0, 10);
+
+            if (results.length > 0) {
+              const totalMatches = voiceModels.filter(vm =>
+                vm.name.toLowerCase().includes(searchTerm)
+              ).length;
+
+              let html = '<div class="search-results-count-dropdown">' + totalMatches + ' result' + (totalMatches !== 1 ? 's' : '') + ' found</div>';
+              html += '<div class="search-dropdown-grid">';
+
+              results.forEach(function(vm) {
+                html += '<a href="' + vm.url + '" class="search-dropdown-item">' +
+                  '<img src="' + vm.img + '" alt="' + vm.name + '">' +
+                  '<span>' + vm.name + '</span>' +
+                  '</a>';
+              });
+
+              html += '</div>';
+
+              if (totalMatches > 10) {
+                html += '<div class="search-no-results">Showing first 10 results...</div>';
+              }
+
+              dropdown.innerHTML = html;
+              dropdown.classList.add('active');
+            } else {
+              dropdown.innerHTML = '<div class="search-dropdown-grid"><div class="search-no-results">No voice models found</div></div>';
+              dropdown.classList.add('active');
+            }
+          });
+
+          // Cerrar dropdown al hacer clic fuera
+          document.addEventListener('click', function(e) {
+            if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+              dropdown.classList.remove('active');
+            }
+          });
+
+          // Cerrar dropdown al presionar Escape
+          searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+              dropdown.classList.remove('active');
+              searchInput.blur();
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  @import '../styles/global.css';
+</style>

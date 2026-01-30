@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Brad Pitt Voice Model - Actor";
+const description = "Download Brad Pitt Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best Actor Voice Models.";
+const rawHtmlContent = "Here we demonstrate to you every <strong>Brad Pitt Voice Models</strong> so you are able to obtain and use them in whatever kind of program. Don't wait any longer and start using the most outstanding Actor voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Brad Pitt</span>\n  <span class=\"vm-cell category\">Actor</span>\n  <span class=\"vm-cell rvc\">RVMPE</span>\n  <span class=\"vm-cell epochs\">300</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/casuallycrayzed/BradPitt/blob/main/BradPitt.zip\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/Brad-Pitt.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p>Brad Pitt, born William Bradley Pitt on December 18, 1963, in Shawnee, Oklahoma, is a renowned American actor, model, and film producer. Throughout his illustrious career, Pitt has been nominated for four Academy Awards, winning Best Supporting Actor in 2020 for Once Upon a Time in Hollywood. He has also earned two Golden Globe Awards, highlighting his versatile acting skills. Known for his striking looks, Pitt is often cited as one of the world's most attractive men and holds significant influence in the entertainment industry. His roles in films like Fight Club and Troy have cemented his status as a Hollywood mainstay.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Brad Pitt Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

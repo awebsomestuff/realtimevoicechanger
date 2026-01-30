@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Sprout Voice Model - Brawl Stars";
+const description = "Download Sprout Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best Brawl Stars Voice Models.";
+const rawHtmlContent = "Below we show you every <strong>Sprout Voice Models</strong> so you are able to access and use them in any kind of program. Don't wait any longer and start using the most outstanding Brawl Stars voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Sprout</span>\n  <span class=\"vm-cell category\">Brawl Stars</span>\n  <span class=\"vm-cell rvc\">RVC1</span>\n  <span class=\"vm-cell epochs\">500</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/KnuxGe1mer/BrawlStars/resolve/main/Sprout.zip\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/Sprout-Voice-Models.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p><strong>Sprout is a Mythic rarity robot</strong> with moderate health and damage output, but it offers immense utility with its Super ability. It attacks by throwing a seed bomb that bounces off the ground and walls, exploding upon enemy contact or after a set time, dealing area damage. For its Super, Sprout launches a Super Seed, creating a temporary wall-like barrier upon landing. Its first Gadget, \"Vegetal Fertilizer,\" allows Sprout to consume a nearby bush to heal 1800 health points. Its second Gadget, \"Transplant,\" destroys an active Super to fully recharge its Super ability. Sprout's first Star Power, \"Overgrowth,\" enhances the explosion radius of its next attack every five seconds, while its second Star Power, \"Photosynthesis,\" provides a damage-reducing shield when in a bush and briefly after exiting one.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Sprout Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

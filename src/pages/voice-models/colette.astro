@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Colette Voice Model - Brawl Stars";
+const description = "Download Colette Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best Brawl Stars Voice Models.";
+const rawHtmlContent = "Below we show to you all <strong>Colette Voice Models</strong> so you can obtain and use them in any kind of program. Don't delay and start using the most outstanding Brawl Stars voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Colette</span>\n  <span class=\"vm-cell category\">Brawl Stars</span>\n  <span class=\"vm-cell rvc\">RVC2</span>\n  <span class=\"vm-cell epochs\">500</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/Pawlik17/Colettebs/resolve/main/Colette.zip\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/Colette.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p><strong>Colette</strong>, a unique character in the universe of <strong>Brawl Stars</strong>, stands out as a Chromatic Brawler who was first introduced in September 2020 as part of the Brawl Pass for Season 3, Welcome to Starr Park! Her role in the game is quite distinctive due to her obsession with collecting items from other Brawlers, which is reflected in her attack mechanics and character design.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Colette Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

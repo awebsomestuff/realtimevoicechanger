@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Black Panther Voice Model - Marvel";
+const description = "Download Black Panther Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best Marvel Voice Models.";
+const rawHtmlContent = "Below we show you all <strong>Black Panther Voice Models</strong> so you can access and use them in whatever type of program. Don't wait any longer and start using the top Marvel voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Black Panther</span>\n  <span class=\"vm-cell category\">Marvel</span>\n  <span class=\"vm-cell rvc\">RVC2</span>\n  <span class=\"vm-cell epochs\">300</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/TJKAI/BlackPannther/resolve/main/BlackPanther.zip\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/black-panther.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p>Black Panther, also known as T'Challa, is a groundbreaking superhero from Marvel Comics, created by Stan Lee and Jack Kirby. First appearing in The Fantastic Four #52, he is the first black superhero in mainstream American comics, predating the Black Panther Party and other notable black superheroes. As the king and protector of the fictional African nation of Wakanda, T'Challa utilizes his enhanced abilities, scientific knowledge, rigorous physical training, and Wakanda's vast wealth and advanced technology to defend his people and their traditions.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Black Panther Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

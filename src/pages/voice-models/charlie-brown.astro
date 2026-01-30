@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Charlie Brown Voice Model - Peanuts";
+const description = "Download Charlie Brown Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best Peanuts Voice Models.";
+const rawHtmlContent = "Here we reveal to you all <strong>Charlie Brown Voice Models</strong> so you are able to obtain and use them in any type of program. Don't delay and begin using the best Peanuts voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Charlie Brown</span>\n  <span class=\"vm-cell category\">Peanuts</span>\n  <span class=\"vm-cell rvc\">RVC2</span>\n  <span class=\"vm-cell epochs\">500</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/joeldabest638/CharlieBrown/resolve/main/charliebrown.zip\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Charlie Brown Murders</span>\n  <span class=\"vm-cell category\">Peanuts</span>\n  <span class=\"vm-cell rvc\">RVC2, RMVPE</span>\n  <span class=\"vm-cell epochs\">120</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/GuilStuf/CharlieBrownMurders/resolve/main/charliebrownmurders.zip\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/Charlie-Brown-Voice-Models.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p><strong>Charlie Brown</strong>, also known as Carlitos in Spain, is the central character of the Peanuts comic strip series, syndicated in numerous newspapers worldwide. Dubbed as the Adorable Loser, Charlie Brown stands as one of the greatest icons of American popular culture. Despite being the protagonist, it could be argued that his dog, Snoopy, surpasses him in popularity.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Charlie Brown Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Carol Voice Model - FNF";
+const description = "Download Carol Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best FNF Voice Models.";
+const rawHtmlContent = "Here we demonstrate to you every <strong>Carol Voice Models</strong> so you are able to obtain and use them in any kind of program. Don't hesitate and start using the top FNF voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Carol</span>\n  <span class=\"vm-cell category\">FNF</span>\n  <span class=\"vm-cell rvc\">RVC2, OV2</span>\n  <span class=\"vm-cell epochs\">675</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/mrcreeper5/CarolFNF/resolve/main/Carolfnf.zip?download=true\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/carol.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p>Carol is a character from the Friday Night Funkin' modding community, created by bbpanzu. Initially serving as an alternative skin for Girlfriend, Carol later gained prominence with her own mod, Carol V2. In this mod, she features in a full week of gameplay that includes three new songs: Carol Roll, Body, and Boogie. Carol also appears as a cameo in various other mods, establishing her as Whitty's girlfriend during The Date Week and revealing her past relationship with Sunday. Her character's evolution showcases the dynamic creativity within the FNF modding scene.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Carol Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

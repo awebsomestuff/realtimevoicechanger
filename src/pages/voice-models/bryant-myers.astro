@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Bryant Myers Voice Model - Singer";
+const description = "Download Bryant Myers Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best Singer Voice Models.";
+const rawHtmlContent = "Here we show you all <strong>Bryant Myers Voice Models</strong> so you are able to download and use them in any type of program. Don't hesitate and start using the most outstanding Singer voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Bryant Myers</span>\n  <span class=\"vm-cell category\">Singer</span>\n  <span class=\"vm-cell rvc\">RVC2</span>\n  <span class=\"vm-cell epochs\">350</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/Dragonite/BryantMyers/resolve/main/BryantMyers(ByDragonite).zip\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/Bryant-myers.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p>Bryant Myers, born Bryan Robert Rohena Pérez on April 5, 1998, in Carolina, Puerto Rico, is a prominent figure in the Latin music scene, known for his distinctive contributions to trap, drill, and reggaeton. As a singer and songwriter, Myers has quickly risen to fame with his deep, raspy voice and gritty lyrical narratives that resonate with a diverse audience. His music often explores themes of urban life and personal experiences, making him a relatable and influential artist in the genre.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Bryant Myers Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>

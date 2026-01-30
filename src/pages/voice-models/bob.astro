@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const title = "Bob Voice Model - FNF";
+const description = "Download Bob Voice Model for all the Voice Changer in different Devices for FREE. Enjoy the best FNF Voice Models.";
+const rawHtmlContent = "Below we reveal to you all <strong>Bob Voice Models</strong> so you are able to access and use them in whatever kind of program. Don't wait any longer and begin using the top FNF voices.\n<div class=\"voice-models-container\">\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Bob</span>\n  <span class=\"vm-cell category\">FNF</span>\n  <span class=\"vm-cell rvc\">OV2 super</span>\n  <span class=\"vm-cell epochs\">300</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://huggingface.co/C0ttontheBunny/BobOv2/resolve/main/BobV3Ov2.zip?download=true\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"voice-model\">\n  <span class=\"vm-cell name\">Bob</span>\n  <span class=\"vm-cell category\">FNF</span>\n  <span class=\"vm-cell rvc empty\">-</span>\n  <span class=\"vm-cell epochs empty\">-</span>\n  <span class=\"vm-cell language empty\">-</span>\n  <a class=\"download-btn\" href=\"https://app.kits.ai/convert/shared/bob-literally-every-fnf-mod-ever\" rel=\"nofollow\">Download</a>\n</div>\n<div class=\"vm-legend\">\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color category\"></span>Category</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color rvc\"></span>RVC Version</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color epochs\"></span>Epochs</span>\n  <span class=\"vm-legend-item\"><span class=\"vm-legend-color language\"></span>Language</span>\n</div>\n</div>\n\n<div class=\"character-about\">\n  <img class=\"character-image\" src=\"/uploads/2024/04/bob.webp\" alt=\"Character\" />\n  <div class=\"character-description\">\n    <h3>About this character</h3>\n    <p>Bob is a drawn character featured in the popular Friday Night Funkin' game mod titled VS. Bob. Known for his quirky appearance and challenging levels, Bob quickly became a fan favorite. His debut in this mod adds unique flair and a fresh challenge to the rhythm game, captivating players with his distinctive style and engaging musical battles. Bob's character and his titular mod have contributed significantly to the community's ever-growing enthusiasm for Friday Night Funkin'.</p>\n  </div>\n</div>";
+---
+
+<Layout title={title} description={description}>
+  <article class="article-content">
+    <h1>Bob Voice Models</h1>
+    <div set:html={rawHtmlContent} />
+  </article>
+</Layout>
