@@ -1160,3 +1160,37 @@ h4 {
     font-size: 1.6rem;
   }
 }
+
+/* ========== Related Voice Models (interlinking) ========== */
+.related-models {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.related-models h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.related-models-grid {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: nowrap;
+}
+
+.related-models-grid .icono {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 960px) {
+  .related-models-grid {
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+}
