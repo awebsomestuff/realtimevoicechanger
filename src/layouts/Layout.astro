@@ -40,18 +40,25 @@ const siteTitle = title.includes("Real-Time Voice Changer") ? title : `${title} 
       <div class="header-container">
         <div class="site-logo">
           <a href="/">
-            <img src="/uploads/2023/12/realtimevoicechanger.png" alt="Real Time Voice Changer" />
+            <picture>
+              <source srcset="/uploads/2023/12/realtimevoicechanger.webp" type="image/webp">
+              <img src="/uploads/2023/12/realtimevoicechanger.png" alt="Real Time Voice Changer" width="300" height="40" />
+            </picture>
           </a>
         </div>
         <nav class="main-nav">
           <ul>
-            <li><a href="/">Home</a></li>
             <li><a href="/voice-models/">Voice Models</a></li>
-            <li><a href="/okada/">Okada</a></li>
-            <li><a href="/clownfish/">Clownfish</a></li>
-            <li><a href="/robovox/">RoboVox</a></li>
-            <li><a href="/voicemod/">Voicemod</a></li>
-            <li><a href="/magicmic/">MagicMic</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Software <span class="dropdown-arrow">▾</span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/okada/">Okada</a></li>
+                <li><a href="/clownfish/">Clownfish</a></li>
+                <li><a href="/robovox/">RoboVox</a></li>
+                <li><a href="/voicemod/">Voicemod</a></li>
+                <li><a href="/magicmic/">MagicMic</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
@@ -68,6 +75,14 @@ const siteTitle = title.includes("Real-Time Voice Changer") ? title : `${title} 
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
+        // ========== DROPDOWN MENU ==========
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        if (dropdownToggle) {
+          dropdownToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+          });
+        }
+
         // ========== SISTEMA DE FILTROS ==========
         const filtersMain = document.getElementById('filters-main');
         const iconos = document.querySelectorAll('.contenedor-iconos .icono');
