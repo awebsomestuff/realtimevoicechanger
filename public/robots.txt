@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://realtimevoicechanger.com/sitemap.xml
+Sitemap: https://realtimevoicechanger.com/sitemap-index.xml

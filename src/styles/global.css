@@ -436,12 +436,12 @@ h4 {
 /* Character About Box */
 .character-about {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 25px;
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   border: 1px solid #dee2e6;
   border-radius: 12px;
-  padding: 25px;
+  padding: 15px 25px 25px;
   margin: 30px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
@@ -458,14 +458,18 @@ h4 {
 
 .character-about .character-description {
   flex: 1;
+  align-self: flex-start;
 }
 
+.character-about .character-description h2,
 .character-about .character-description h3 {
   color: #2662d9;
   font-size: 18px;
   margin: 0 0 12px 0;
   padding-bottom: 8px;
   border-bottom: 2px solid #2662d9;
+  text-align: left;
+  text-decoration: none;
 }
 
 .character-about .character-description p {
@@ -1175,22 +1179,14 @@ h4 {
 }
 
 .related-models-grid {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  justify-items: center;
 }
 
-.related-models-grid .icono {
-  width: 140px;
-  height: 140px;
-  flex-shrink: 0;
-}
-
-@media (max-width: 960px) {
+@media (max-width: 600px) {
   .related-models-grid {
-    overflow-x: auto;
-    justify-content: flex-start;
-    padding-bottom: 10px;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
